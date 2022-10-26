@@ -8,29 +8,20 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
    destinations:
-  - namespace: tools
-    server: https://kubernetes.default.svc
-  - namespace: ibm-common-services
-    server: https://kubernetes.default.svc
-  - namespace: cloudpak
-    server: https://kubernetes.default.svc
-  - namespace: redhat-operators
-    server: https://kubernetes.default.svc
-  - namespace: openshift-operators
-    server: https://kubernetes.default.svc
-  - namespace: openshift-marketplace
-    server: https://kubernetes.default.svc
-  - namespace: sealed-secrets
-    server: https://kubernetes.default.svc
-  - namespace: openldap
-    server: https://kubernetes.default.svc
-  - namespace: openshift-gitops
     server: https://kubernetes.default.svc
   - namespace: db2
     server: https://kubernetes.default.svc
-  - namespace: kube-system
+  - namespace: ibm-common-services
+    server: https://kubernetes.default.svc
+  - namespace: openldap
     server: https://kubernetes.default.svc
   - namespace: cp4a
+    server: https://kubernetes.default.svc
+  - namespace: openshift-image-registry
+    server: https://kubernetes.default.svc
+  - namespace: odm
+    server: https://kubernetes.default.svc
+  - namespace: kube-system
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   # TODO: SCC needs to be moved to 1-infra, here for now for artifactory
