@@ -7,9 +7,7 @@ metadata:
     gitops.tier.layer: services
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
-   destinations:
-  - namespace: openshift-gitops
-    server: https://kubernetes.default.svc
+  destinations:
   - namespace: tools
     server: https://kubernetes.default.svc
   - namespace: db2
@@ -25,6 +23,8 @@ spec:
   - namespace: odm
     server: https://kubernetes.default.svc
   - namespace: kube-system
+    server: https://kubernetes.default.svc
+  - namespace: openshift-gitops
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   # TODO: SCC needs to be moved to 1-infra, here for now for artifactory
@@ -88,4 +88,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
