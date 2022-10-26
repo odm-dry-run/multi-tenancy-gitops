@@ -1,9 +1,13 @@
 resources:
-# IBM CP4A/ODM
+# Db2 Operator
 # - argocd/operators/ibm-cp4a-db2.yaml
+# DB2 Instance
 # - argocd/instances/ibm-cp4a-db2ucluster.yaml
+# Openldap demonset/deployment
 # - argocd/instances/ibm-cp4a-openldap-odm.yaml
+# CP4A operator
 # - argocd/operators/ibm-cp4a-odm-operator.yaml
+# ODM Instance
 # - argocd/instances/ibm-cp4a-icp4acluster.yaml
 
 patches:
