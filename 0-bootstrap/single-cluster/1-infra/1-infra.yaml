@@ -8,8 +8,6 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 1-infra/kustomization.yaml
   destinations:
-  - namespace: openshift-gitops
-    server: https://kubernetes.default.svc
   - namespace: tools
     server: https://kubernetes.default.svc
   - namespace: db2
@@ -25,6 +23,8 @@ spec:
   - namespace: odm
     server: https://kubernetes.default.svc
   - namespace: kube-system
+    server: https://kubernetes.default.svc
+  - namespace: openshift-gitops
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   - group: ""
